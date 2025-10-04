@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="form-validate" novalidate>
+        <h1>Form Validation</h1>
+        
+        <label for="email">Email: </label>
+        <input name="email" type="email" id="email" required>
+        <span class="error"></span>
+
+        <label for="country">Country: </label>
+        <input name="country" type="text" id="country" pattern="[A-Za-z\s]+" required>
+        <span class="error"></span>
+
+        <label for="postalCode">Postal Code: </label>
+        <input name="postalCode" type="number" id="postalCode" pattern="\d{5}" required>
+        <span class="error"></span>
+
+        <label for="password">Password: </label>
+        <input name="password" type="password" id="password" required minlength="6">
+        <span class="error"></span>
+
+        <label for="password-conf">Password Confirmation: </label>
+        <input name="password-conf" type="password" id="password-conf" required>
+        <span class="error"></span>
+
+        <button type="submit" id="btn">Submit</button>
+
+    </form>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
